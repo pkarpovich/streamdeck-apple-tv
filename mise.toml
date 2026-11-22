@@ -1,0 +1,28 @@
+[tools]
+node = "26.13.1"
+pnpm = "12.21.0"
+
+[tasks.install]
+description = "Install dependencies from the lockfile"
+run = "pnpm install --frozen-lockfile"
+
+[tasks.build]
+description = "Compile the sources and bundle them into the plugin folder"
+depends = ["install"]
+run = ["pnpm exec tsc -p tsconfig.build.json", "pnpm exec rollup -c"]
+
+[tasks.check]
+description = "Format check, type check, tests and manifest validation"
+depends = ["build"]
+run = [
+  "pnpm exec prettier --check .",
+  "pnpm exec tsc -p tsconfig.json",
+  "pnpm exec vitest run",
+  "pnpm exec streamdeck validate com.pavel-karpovich.apple-tv.sdPlugin --no-update-check",
+]
+
+[tasks.pack]
+description = "Pack the plugin into dist/"
+depends = ["build"]
+usage = 'arg "[version]" help="Version written into the manifest, for example 1.2.3"'
+run = 'pnpm exec streamdeck pack com.pavel-karpovich.apple-tv.sdPlugin --output dist --force --no-update-check ${usage_version:+--version "$usage_version"}'

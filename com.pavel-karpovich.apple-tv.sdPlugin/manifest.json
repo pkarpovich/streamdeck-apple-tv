@@ -1,0 +1,140 @@
+{
+	"$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+	"Name": "Apple TV",
+	"Version": "0.1.0.0",
+	"Author": "Pavel Karpovich",
+	"Description": "Apple TV remote keys that call the tools of an MCP server.",
+	"UUID": "com.pavel-karpovich.apple-tv",
+	"Icon": "imgs/plugin/marketplace",
+	"Category": "Apple TV",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"PropertyInspectorPath": "ui/settings.html",
+	"SDKVersion": 3,
+	"Software": {
+		"MinimumVersion": "7.1"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "12"
+		}
+	],
+	"Nodejs": {
+		"Version": "26"
+	},
+	"Actions": [
+		{
+			"Name": "Up",
+			"UUID": "com.pavel-karpovich.apple-tv.up",
+			"Icon": "imgs/actions/up",
+			"Tooltip": "Presses up on the Apple TV remote.",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/up"
+				}
+			]
+		},
+		{
+			"Name": "Down",
+			"UUID": "com.pavel-karpovich.apple-tv.down",
+			"Icon": "imgs/actions/down",
+			"Tooltip": "Presses down on the Apple TV remote.",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/down"
+				}
+			]
+		},
+		{
+			"Name": "Left",
+			"UUID": "com.pavel-karpovich.apple-tv.left",
+			"Icon": "imgs/actions/left",
+			"Tooltip": "Presses left on the Apple TV remote.",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/left"
+				}
+			]
+		},
+		{
+			"Name": "Right",
+			"UUID": "com.pavel-karpovich.apple-tv.right",
+			"Icon": "imgs/actions/right",
+			"Tooltip": "Presses right on the Apple TV remote.",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/right"
+				}
+			]
+		},
+		{
+			"Name": "Select",
+			"UUID": "com.pavel-karpovich.apple-tv.select",
+			"Icon": "imgs/actions/select",
+			"Tooltip": "Presses select on the Apple TV remote.",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/select"
+				}
+			]
+		},
+		{
+			"Name": "Menu",
+			"UUID": "com.pavel-karpovich.apple-tv.menu",
+			"Icon": "imgs/actions/menu",
+			"Tooltip": "Presses menu on the Apple TV remote.",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/menu"
+				}
+			]
+		},
+		{
+			"Name": "Home",
+			"UUID": "com.pavel-karpovich.apple-tv.home",
+			"Icon": "imgs/actions/home",
+			"Tooltip": "Presses home on the Apple TV remote.",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/home"
+				}
+			]
+		},
+		{
+			"Name": "Play/Pause",
+			"UUID": "com.pavel-karpovich.apple-tv.play-pause",
+			"Icon": "imgs/actions/play-pause",
+			"Tooltip": "Toggles play and pause on the Apple TV.",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/play-pause"
+				}
+			]
+		}
+	]
+}

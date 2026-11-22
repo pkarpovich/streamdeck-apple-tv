@@ -1,0 +1,3 @@
+pnpm-lock.yaml
+*.sdPlugin/manifest.json
+*.sdPlugin/ui/sdpi-components.*

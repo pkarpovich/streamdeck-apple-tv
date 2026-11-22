@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Apple TV settings</title>
+		<script src="sdpi-components.js"></script>
+	</head>
+	<body>
+		<sdpi-item label="MCP server URL">
+			<sdpi-textfield setting="serverUrl" global placeholder="https://example.com/mcp" required></sdpi-textfield>
+		</sdpi-item>
+		<sdpi-item label="Issuer">
+			<sdpi-textfield setting="issuer" global placeholder="https://auth.example.com" required></sdpi-textfield>
+		</sdpi-item>
+		<sdpi-item label="Token endpoint">
+			<sdpi-textfield
+				setting="tokenEndpoint"
+				global
+				placeholder="https://auth.example.com/token"
+				required
+			></sdpi-textfield>
+		</sdpi-item>
+		<sdpi-item label="Client ID">
+			<sdpi-textfield setting="clientId" global required></sdpi-textfield>
+		</sdpi-item>
+		<sdpi-item label="Key ID">
+			<sdpi-textfield setting="keyId" global required></sdpi-textfield>
+		</sdpi-item>
+		<sdpi-item label="Private key file">
+			<sdpi-textfield setting="keyFile" global placeholder="/path/to/client-key.pem" required></sdpi-textfield>
+		</sdpi-item>
+		<sdpi-item label="Scope">
+			<sdpi-textfield setting="scope" global required></sdpi-textfield>
+		</sdpi-item>
+	</body>
+</html>
